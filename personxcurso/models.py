@@ -10,6 +10,8 @@ class Persxcurso(models.Model):
     Persona_idPersona= models.ForeignKey(Persona, on_delete=models.CASCADE)
     Persona_Rol_idRol = models.ForeignKey(Rol, on_delete=models.CASCADE)
     Curso_idCurso= models.ForeignKey(Curso, on_delete=models.CASCADE)
+    estado = models.BooleanField(default=False,blank=False, null=False)
+    archivo = models.FileField(blank=True, null=True, upload_to='uploads/')
 
     class Meta:
         verbose_name = "Persona por curso"

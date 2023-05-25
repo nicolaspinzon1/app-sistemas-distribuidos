@@ -10,7 +10,7 @@ from personxcurso.models import Persxcurso
 
 def sign_up(request):
     if request.method == 'GET':
-        return render(request, 'signup.html', {
+        return render(requestº, 'signup.html', {
             'form': UserCreationForm
         })
     else:
@@ -30,10 +30,10 @@ def sign_up(request):
                 persona = Persona.objects.create(nombre = nombre, apellido = apellido, cedula = cedula, telefono = telefono, Rol_idRol = rol)
 
                 persona.save()
-                user.save()
+                user.save() 
 
                 login(request, user)
-                return redirect('curso')
+                return redirect('/cursos/mis-cursos/')
             except IntegrityError:
                 return render(request, 'signup.html', {
                     'form': UserCreationForm,
@@ -63,4 +63,4 @@ def sign_in(request):
 @login_required
 def signout(request):
     logout(request)
-    return redirect('home.html')
+    return redirect(request, 'home.html')
