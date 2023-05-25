@@ -4,7 +4,7 @@ from rol.models import Rol
 
 
 class Persona(models.Model):
-    idPersona = models.IntegerField(primary_key=True)
+    idPersona = models.AutoField(primary_key=True, auto_created=True)
     nombre = models.CharField(max_length=32, blank=False, null=False)
     apellido = models.CharField(max_length=32,  blank=True, null=True)
     cedula = models.IntegerField()
