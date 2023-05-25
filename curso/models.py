@@ -13,4 +13,4 @@ class Curso(models.Model):
         verbose_name_plural = "Cursos"
 
     def __str__(self):
-        return f"{self.nombre}  "  
+        return f"{self.nombre} {self.descripcion} "  

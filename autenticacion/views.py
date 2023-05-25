@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, logout, authenticate # crear la cookie   
+from django.contrib.auth import login, logout, authenticate # crear la cookie 
+from django.contrib.auth.decorators import login_required  
 from django.db import IntegrityError
 from django.contrib.auth.models import User
 from persona.models import Persona, Rol
@@ -59,3 +60,7 @@ def sign_in(request):
         else:
             login(request, user)
             return redirect('/cursos/mis-cursos/')
+@login_required
+def signout(request):
+    logout(request)
+    return redirect('home.html')

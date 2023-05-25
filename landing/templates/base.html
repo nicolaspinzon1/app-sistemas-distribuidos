@@ -44,20 +44,21 @@
             </li>
 
             {% if user.is_authenticated %}
-            <li class="nav-item">
+            {% comment %} <li class="nav-item">
               <a href="" class="nav-link">Cursos pendientes</a>
             </li>
             <li class="nav-item">
               <a href="" class="nav-link"
                 >Cursos Completados</a
               >
+            </li> {% endcomment %}
+            <li class="nav-item">
+              <a href="/auth/signin" class="nav-link">Iniciar sesion</a>
             </li>
             <li class="nav-item">
-              <a href="/curso/create/" class="nav-link">Crear curso</a>
+              <a href="/auth/signup" class="nav-link">Regístrese</a>
             </li>
-            <li class="nav-item">
-              <a href="/logout" class="nav-link">Cerrar sesion</a>
-            </li>
+           
             {% else %}
             <li class="nav-item">
               <a href="/auth/signup" class="nav-link">Regístrese</a>

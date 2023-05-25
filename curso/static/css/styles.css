@@ -1,0 +1,120 @@
+
+html, body {
+    height: 100%;
+  }
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+
+    height: 100vh;
+    background: linear-gradient(70deg, rgb(15, 19, 36), 80%, rgb(37, 68, 68));
+
+}
+
+header {
+    padding: 2rem 0rem;
+    
+}
+
+header h1 {
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+}
+
+section article {
+    margin: auto;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+div {
+    padding: 0.15rem 0.15rem;
+
+}
+#image {
+    padding: 0 0.5rem 2.5rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    border-radius: 1rem;
+}
+#textField {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 120%;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    border-radius: 2rem;
+
+  }
+
+ input, textarea {
+    height: 60px;
+    width : 650px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+
+  }
+
+  button {
+    height: 50px;
+    width : 200px;
+    cursor: pointer;
+
+  }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3%;
+    background-color: rgb(19, 19, 19);
+    padding: 3rem;
+    color: #fff;
+    font-size: 120%;
+}
+
+section footer{
+    float: left;
+}
+
+footer p{
+    margin: 0;
+    float: left;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color:mediumturquoise;
+}
+
+
+
+
