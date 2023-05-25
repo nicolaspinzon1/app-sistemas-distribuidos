@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMART SEARCH | Mis Cursos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css
+    "
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+  <div class="container">
+    <h1>¡Bienvenido! {{ persona.nombre }} {{ persona.apellido }}</h1>
+    <h3>Tu listado de cursos</h3>
+
+    <table class="table  table-hover table-striped table-dark">
+      <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre de Curso</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Duración</th>
+            <th scope="col">Opción</th>
+          </tr>
+        {% if listado_cursos %} 
+        {% for curso in listado_cursos %} 
+        <tbody>
+            <tr>
+                <th scope="row">{{ curso.Curso_idCurso.idCurso   }}</th>
+                <th scope="row">{{ curso.Curso_idCurso }}</th>
+                <th scope="row">{{ curso.Curso_idCurso.descripcion  }}</th>
+                <th scope="row">{{ curso.Curso_idCurso.duracion }}</th>
+                <th scope="row">
+                    <a href="#">Ver detalles</a>
+                </th>
+
+            </tr>
+        </tbody>
+        {% endfor %}
+        {% else %}
+        <tbody>
+            <tr>
+                <th scope="row">No tienes ningún curso...</th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row">
+                </th>
+            </tr>
+        </tbody>
+        {% endif %}
+      </thead>
+    </table>
+  </div>
+  </body>
+</html>
